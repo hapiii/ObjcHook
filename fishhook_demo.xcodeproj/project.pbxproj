@@ -14,6 +14,9 @@
 		BF309DAD2646780E004086BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF309DAC2646780E004086BB /* Assets.xcassets */; };
 		BF309DB02646780E004086BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF309DAE2646780E004086BB /* LaunchScreen.storyboard */; };
 		BF309DB32646780E004086BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF309DB22646780E004086BB /* main.m */; };
+		BF309DBC26467B76004086BB /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = BF309DBA26467B75004086BB /* fishhook.c */; };
+		BF309E3D264910DA004086BB /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF309E3C264910D9004086BB /* LocationHelper.m */; };
+		BF309E61264A2EA6004086BB /* ObjcHook.c in Sources */ = {isa = PBXBuildFile; fileRef = BF309E60264A2EA6004086BB /* ObjcHook.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		BF309DAF2646780E004086BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF309DB12646780E004086BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF309DB22646780E004086BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF309DBA26467B75004086BB /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		BF309DBB26467B76004086BB /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		BF309E3B264910D9004086BB /* LocationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
+		BF309E3C264910D9004086BB /* LocationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
+		BF309E5F264A2EA6004086BB /* ObjcHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcHook.h; sourceTree = "<group>"; };
+		BF309E60264A2EA6004086BB /* ObjcHook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ObjcHook.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +70,18 @@
 		BF309D9F2646780C004086BB /* fishhook_demo */ = {
 			isa = PBXGroup;
 			children = (
+				BF309DBA26467B75004086BB /* fishhook.c */,
+				BF309DBB26467B76004086BB /* fishhook.h */,
 				BF309DA02646780C004086BB /* AppDelegate.h */,
 				BF309DA12646780C004086BB /* AppDelegate.m */,
 				BF309DA32646780C004086BB /* SceneDelegate.h */,
 				BF309DA42646780C004086BB /* SceneDelegate.m */,
 				BF309DA62646780C004086BB /* ViewController.h */,
 				BF309DA72646780C004086BB /* ViewController.m */,
+				BF309E5F264A2EA6004086BB /* ObjcHook.h */,
+				BF309E60264A2EA6004086BB /* ObjcHook.c */,
+				BF309E3B264910D9004086BB /* LocationHelper.h */,
+				BF309E3C264910D9004086BB /* LocationHelper.m */,
 				BF309DA92646780C004086BB /* Main.storyboard */,
 				BF309DAC2646780E004086BB /* Assets.xcassets */,
 				BF309DAE2646780E004086BB /* LaunchScreen.storyboard */,
@@ -146,6 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF309DA82646780C004086BB /* ViewController.m in Sources */,
+				BF309E61264A2EA6004086BB /* ObjcHook.c in Sources */,
+				BF309DBC26467B76004086BB /* fishhook.c in Sources */,
+				BF309E3D264910DA004086BB /* LocationHelper.m in Sources */,
 				BF309DA22646780C004086BB /* AppDelegate.m in Sources */,
 				BF309DB32646780E004086BB /* main.m in Sources */,
 				BF309DA52646780C004086BB /* SceneDelegate.m in Sources */,
@@ -225,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,13 +310,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RW5K2Y374Q;
+				DEVELOPMENT_TEAM = 7BM224Q2NE;
 				INFOPLIST_FILE = fishhook_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hapii.fishhook-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "hapii.fishhook-demoo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,13 +328,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RW5K2Y374Q;
+				DEVELOPMENT_TEAM = 7BM224Q2NE;
 				INFOPLIST_FILE = fishhook_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hapii.fishhook-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "hapii.fishhook-demoo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
